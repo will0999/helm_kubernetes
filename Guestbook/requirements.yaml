@@ -1,0 +1,5 @@
+dependencies:
+  - name: redis
+    version: "10.8.6"  # Versão específica do chart do Redis
+    repository: "https://charts.bitnami.com/bitnami"
+    alias: redis
