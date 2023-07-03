@@ -5,11 +5,8 @@
 
 # Deploy Redis
 helm repo add bitnami https://charts.bitnami.com/bitnami
-helm install redis bitnami/redis -f Redis/config/values.yaml
+helm install redis bitnami/redis -values Redis/config/values.yaml -n guestbook
 
 # Deploy Guestbook com Redis
-helm install guestbook Guestbook -f Guestbook/config/values.yaml
+helm install guestbook Guestbook -n guestbook
 
-#helm repo add bitnami https://charts.bitnami.com/bitnami
-#helm install redis bitnami/redis -values Redis/config/values.yaml -n guestbook
-#helm install guestbook Guestbook -n guestbook
